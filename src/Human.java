@@ -24,6 +24,10 @@ public class Human {
         return name_p;
     }
 
+    public String getChild() {
+        return child;
+    }
+
     @Override
     public String toString() {
         return "Родитель: " + name_p + " " + "Ребенок: " + child;
