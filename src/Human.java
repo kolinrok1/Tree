@@ -1,22 +1,32 @@
 public class Human {
     private String gender;
-    private String name;
-    private String parant;
+    private String name_p;
+    private String child;
 
-    public Human(String gender, String name, String parant) {
+    public Human(String gender, String name_p, String child) {
         this.gender = gender;
-        this.name = name;
-        this.parant = parant;
+        this.name_p = name_p;
+        if (child.equals("")){
+            this.child = "-";
+        }
+        else {
+            this.child = child;
+        }
     }
 
-    public Human(String gender, String name) {
+    public Human(String gender, String name_p) {
         this.gender = gender;
-        this.name = name;
-        this.parant = "-";
+        this.name_p = name_p;
+        this.child = "-";
+    }
+
+    public String getName_p() {
+        return name_p;
     }
 
     @Override
     public String toString() {
-        return name + " " + gender + " " + parant;
+        return "Родитель: " + name_p + " " + "Ребенок: " + child;
     }
+
 }
