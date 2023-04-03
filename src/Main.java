@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-
-        Human Human1 = new Human("man", "Oleg", "Ivan");
-        Human Human2 = new Human("woman", "Alla", "Ivan");
+        FamilyTree tree = new FamilyTree();
+        Human Human1 = new Human("man", "Oleg");
+        Human Human2 = new Human("woman", "Alla");
         Human Human3 = new Human("woman", "Ylya", "Oleg");
         Human Human4 = new Human("man", "Saha", "Oleg");
         Human Human5 = new Human("man", "Misha", "Dima");
