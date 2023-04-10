@@ -3,20 +3,20 @@ import java.util.List;
 
 public class Tree_human {
     private List<Human> humanList;
-
+    public Tree_human() {
+        this(new ArrayList<>());
+    }
     public Tree_human(List<Human> humanList) {
         this.humanList = humanList;
     }
 
-    public Tree_human() {
-        this(new ArrayList<>());
-    }
+
 
     public boolean addHuman(Human human) {
         if (human == null) {
             return false;
         }
-        if (humanList.contains(human)) {
+        if (!humanList.contains(human)) {
             humanList.add(human);
             if (human.getFather() != null) {
                 human.getFather().addChild(human);
@@ -28,11 +28,12 @@ public class Tree_human {
         }
         return false;
     }
-        //public List<Human> getHumanList () {
-         //   return humanList;
-        //}
+        public List<Human> getHumanList () {
+           return humanList;
+      }
     public Human getByName(String name){
         for (Human human: humanList){
+            //System.out.println(humanList.size());
             if (human.getName_p().equals(name)){
                 return human;
             }

@@ -18,6 +18,9 @@ public class Human {
     public Human(String gender, String name_p) {
         this.gender = gender;
         this.name = name_p;
+        father = null;
+        mather = null;
+        children = new ArrayList<>();
     }
 
     public String getName_p() {
